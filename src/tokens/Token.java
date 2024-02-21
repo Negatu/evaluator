@@ -17,7 +17,7 @@ abstract class Token {
     /*
      * Returns true if the token can be extended with the letter, false otherwise
      */
-    public boolean update(char letter) {
+    public boolean extend(char letter) {
         return false;
     }
 
@@ -26,6 +26,14 @@ abstract class Token {
      */
     public String getText() {
         return text;
+    }
+
+    protected void extendText(char letter) {
+        text += letter;
+    }
+
+    protected void replaceText(String text) {
+        this.text = text;
     }
 
     public TokenType getType() {
