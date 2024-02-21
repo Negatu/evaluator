@@ -1,8 +1,9 @@
 package evaluator.lex;
 
-import org.junit.Test;
 import static org.junit.jupiter.api.Assertions.assertThrows;
 import static org.assertj.core.api.Assertions.assertThat;
+
+import org.junit.Test;
 
 import evaluator.tokens.Token;
 import evaluator.tokens.TokenType;

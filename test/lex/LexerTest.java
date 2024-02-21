@@ -1,7 +1,9 @@
 package evaluator.lex;
 
-import org.junit.Test;
 import static org.assertj.core.api.Assertions.assertThat;
+import static org.junit.jupiter.api.Assertions.assertThrows;
+
+import org.junit.Test;
 import java.util.ArrayList;
 
 import evaluator.lex.Lexer;
@@ -37,5 +39,11 @@ public class LexerTest {
         assertThat(tokens.get(2)).isInstanceOf(PlusToken.class);
         assertThat(tokens.get(3)).isInstanceOf(WhitespaceToken.class);
         assertThat(tokens.get(4)).isInstanceOf(NumberToken.class);
+    }
+
+    @Test
+    public void getTokens_with_bad_input_propagates_exception() {
+        Lexer lexer = new Lexer("1 + %");
+        assertThrows(Exception.class, () -> lexer.getTokens());
     }
 }
