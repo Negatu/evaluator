@@ -1,6 +1,6 @@
 package evaluator.tokens;
 
-class WhitespaceToken extends Token {
+public class WhitespaceToken extends Token {
     public static final String WHITESPACE = " ";
     private int length = 0;
 

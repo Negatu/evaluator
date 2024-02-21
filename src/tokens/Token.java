@@ -1,11 +1,6 @@
 package evaluator.tokens;
 
-enum TokenType {
-    NUMBER, WHITESPACE, PLUS, STAR, DASH, EOF,
-    LEFT_BRACKET, RIGHT_BRACKET
-}
-
-abstract class Token {
+public abstract class Token {
     private String text;
     private TokenType type;
 
@@ -38,13 +33,5 @@ abstract class Token {
 
     public TokenType getType() {
         return type;
-    }
-}
-
-class EOFToken extends Token {
-    public static final String EMPTY_STRING = "";
-
-    public EOFToken() {
-        super(EMPTY_STRING, TokenType.EOF);
     }
 }

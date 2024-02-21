@@ -1,6 +1,6 @@
 package evaluator.tokens;
 
-class NumberToken extends Token {
+public class NumberToken extends Token {
     private int number;
 
     public NumberToken(int number) {
