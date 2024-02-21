@@ -1,4 +1,4 @@
-package evaluator.src.tokens;
+package evaluator.tokens;
 
 abstract class OpToken extends Token {
     public static final String PLUS_SYMBOL = "+";
