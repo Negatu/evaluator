@@ -1,6 +1,7 @@
 package evaluator.expressions;
 
 import evaluator.SyntaxNode;
+import evaluator.expressions.values.NumberValue;
 import evaluator.tokens.Token;
 
 /*
@@ -22,7 +23,8 @@ public abstract class Expression implements SyntaxNode {
     }
 
     /*
-     * Returns the value that is the result of evaluating this expression node.
+     * Returns a value expression that is the result of evaluating this expression
+     * node.
      */
-    public abstract Value eval();
+    public abstract NumberValue eval();
 }

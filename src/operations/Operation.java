@@ -11,4 +11,6 @@ public abstract class Operation implements SyntaxNode {
         return new ArrayList<SyntaxNode>();
     }
 
+    public abstract String toString();
+
 }
