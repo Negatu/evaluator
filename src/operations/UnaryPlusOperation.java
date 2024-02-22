@@ -2,18 +2,20 @@ package evaluator.operations;
 
 import java.util.ArrayList;
 
-import evaluator.values.NumberValue;
 import evaluator.SyntaxNode;
+import evaluator.tokens.OpToken;
+import evaluator.tokens.PlusToken;
+import evaluator.values.NumberValue;
 
-public class BinaryPlusOperation extends BinaryOperation {
+public class UnaryPlusOperation extends UnaryOperation {
     @Override
-    public NumberValue eval(NumberValue left, NumberValue right) {
-        return new NumberValue(left.getNumber() + right.getNumber());
+    public NumberValue eval(NumberValue value) {
+        return value;
     }
 
     @Override
     public String toString() {
-        return "BINARY PLUS OP";
+        return "UNARY PLUS OP";
     }
 
     @Override

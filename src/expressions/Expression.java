@@ -1,7 +1,7 @@
 package evaluator.expressions;
 
 import evaluator.SyntaxNode;
-import evaluator.expressions.values.NumberValue;
+import evaluator.values.NumberValue;
 import evaluator.tokens.Token;
 
 /*

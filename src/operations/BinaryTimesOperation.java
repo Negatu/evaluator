@@ -2,7 +2,7 @@ package evaluator.operations;
 
 import java.util.ArrayList;
 
-import evaluator.expressions.values.NumberValue;
+import evaluator.values.NumberValue;
 import evaluator.SyntaxNode;
 
 public class BinaryTimesOperation extends BinaryOperation {

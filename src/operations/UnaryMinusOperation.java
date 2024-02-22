@@ -3,20 +3,19 @@ package evaluator.operations;
 import java.util.ArrayList;
 
 import evaluator.SyntaxNode;
+import evaluator.tokens.OpToken;
+import evaluator.tokens.MinusToken;
 import evaluator.values.NumberValue;
 
-public class BinaryMinusOperation extends BinaryOperation {
-    public BinaryMinusOperation() {
-    }
-
+public class UnaryMinusOperation extends UnaryOperation {
     @Override
-    public NumberValue eval(NumberValue left, NumberValue right) {
-        return new NumberValue(left.getNumber() - right.getNumber());
+    public NumberValue eval(NumberValue value) {
+        return new NumberValue(-value.getNumber());
     }
 
     @Override
     public String toString() {
-        return "BINARY MINUS OP";
+        return "UNARY MINUS OP";
     }
 
     @Override

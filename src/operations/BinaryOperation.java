@@ -1,6 +1,6 @@
 package evaluator.operations;
 
-import evaluator.expressions.values.NumberValue;
+import evaluator.values.NumberValue;
 import evaluator.tokens.OpToken;
 import evaluator.tokens.MinusToken;
 import evaluator.tokens.PlusToken;

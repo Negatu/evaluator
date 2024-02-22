@@ -1,6 +1,6 @@
-package evaluator.expressions.values;
+package evaluator.values;
 
-import evaluator.expressions.values.Value;
+import evaluator.values.Value;
 
 public class NumberValue extends Value {
 

@@ -1,4 +1,4 @@
-package evaluator.expressions.values;
+package evaluator.values;
 
 /*
  * Represents a supertype for the result of evaluating an expression node. 

@@ -4,7 +4,7 @@ import org.junit.Test;
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.junit.jupiter.api.Assertions.assertThrows;
 
-import evaluator.expressions.values.NumberValue;
+import evaluator.values.NumberValue;
 import evaluator.tokens.PlusToken;
 import evaluator.tokens.TimesToken;
 import evaluator.tokens.MinusToken;
