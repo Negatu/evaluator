@@ -19,4 +19,13 @@ public class NumberValue extends Value {
         return Double.toString(number);
     }
 
+    @Override
+    public boolean equals(Object obj) {
+        if (obj instanceof NumberValue) {
+            NumberValue other = (NumberValue) obj;
+            return number == other.number;
+        }
+        return false;
+    }
+
 }

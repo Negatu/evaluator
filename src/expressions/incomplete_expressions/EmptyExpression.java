@@ -5,6 +5,9 @@ import java.util.ArrayList;
 import evaluator.SyntaxNode;
 import evaluator.expressions.extenders.EmptyExpressionExtender;
 
+/*
+ * Represents an empty expression that doesn't contain any fields.
+ */
 public class EmptyExpression extends IncompleteExpression {
 
     public EmptyExpression() {
