@@ -26,13 +26,13 @@ public class UnaryExpressionTest {
     }
 
     @Test
-    public void testEval() {
+    public void eval_appliesOperationToOperand() {
         NumberValue expectedValue = new NumberValue(-5);
         assertThat(unaryExpression.eval()).isEqualTo(expectedValue);
     }
 
     @Test
-    public void testGetChildren() {
+    public void getChildren_returnsOperationAndOperand() {
         ArrayList<SyntaxNode> children = unaryExpression.getChildren();
         assertThat(children).hasSize(2);
         assertThat(children).contains(operation);
