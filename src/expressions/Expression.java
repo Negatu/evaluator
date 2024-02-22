@@ -27,4 +27,5 @@ public abstract class Expression implements SyntaxNode {
      * node.
      */
     public abstract NumberValue eval();
+
 }
