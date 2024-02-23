@@ -8,6 +8,6 @@ import evaluator.tokens.Token;
 public class EmptyExpressionExtender extends ExpressionExtender<EmptyExpression> {
     @Override
     public Expression extend(EmptyExpression expression, Token token) {
-        return null;
+        throw new UnsupportedOperationException("EmptyExpresssionExtender is not implemented.");
     }
 }
