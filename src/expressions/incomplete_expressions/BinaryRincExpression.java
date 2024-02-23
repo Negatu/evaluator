@@ -9,7 +9,7 @@ import evaluator.operations.BinaryOperation;
 
 /*
  * Represents an incomplete expression with a binary operation. 
- * Rinc stands for right incomplete. Expressions are written from left to right, and this expression is incomplete from the right.
+ * Rinc stands for right incomplete. Expressions are written from left to right, and this expression has an incomplete right operand.
  * e.g. 5 + , (5 * 3) + , 5 + (5 * 3) +
  */
 public class BinaryRincExpression extends IncompleteExpression {
