@@ -27,4 +27,13 @@ public class OpenPRincExpression extends IncompleteExpression {
         children.add(innerExpression);
         return children;
     }
+
+    @Override
+    public boolean equals(Object obj) {
+        if (obj == null || getClass() != obj.getClass()) {
+            return false;
+        }
+        OpenPRincExpression other = (OpenPRincExpression) obj;
+        return innerExpression.equals(other.innerExpression);
+    }
 }

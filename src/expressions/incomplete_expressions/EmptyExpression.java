@@ -23,4 +23,9 @@ public class EmptyExpression extends IncompleteExpression {
     public ArrayList<SyntaxNode> getChildren() {
         return new ArrayList<SyntaxNode>();
     }
+
+    @Override
+    public boolean equals(Object obj) {
+        return obj != null && getClass() == obj.getClass();
+    }
 }

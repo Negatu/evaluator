@@ -29,4 +29,13 @@ public class NumberExpression extends CompleteExpression {
         // A NumberExpression is a leaf node in the parse tree, so it has no children.
         return new ArrayList<SyntaxNode>();
     }
+
+    @Override
+    public boolean equals(Object obj) {
+        if (obj == null || getClass() != obj.getClass()) {
+            return false;
+        }
+        NumberExpression other = (NumberExpression) obj;
+        return number == other.number;
+    }
 }
