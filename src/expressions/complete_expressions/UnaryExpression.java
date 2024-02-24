@@ -2,7 +2,7 @@ package evaluator.expressions.complete_expressions;
 
 import java.util.ArrayList;
 
-import evaluator.expressions.extenders.EmptyExpressionExtender;
+import evaluator.expressions.extenders.CompleteExpressionExtender;
 import evaluator.values.NumberValue;
 import evaluator.operations.UnaryOperation;
 import evaluator.SyntaxNode;
@@ -12,7 +12,7 @@ public class UnaryExpression extends CompleteExpression {
     private CompleteExpression operand;
 
     public UnaryExpression(UnaryOperation operation, CompleteExpression operand) {
-        super(new EmptyExpressionExtender());
+        super(new CompleteExpressionExtender());
         this.operation = operation;
         this.operand = operand;
     }

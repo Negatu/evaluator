@@ -2,7 +2,7 @@ package evaluator.expressions.complete_expressions;
 
 import java.util.ArrayList;
 
-import evaluator.expressions.extenders.EmptyExpressionExtender;
+import evaluator.expressions.extenders.UnimplementedExpressionExtender;
 import evaluator.operations.BinaryOperation;
 import evaluator.SyntaxNode;
 import evaluator.values.NumberValue;
@@ -17,7 +17,7 @@ public class BinaryExpression extends CompleteExpression {
 
     public BinaryExpression(BinaryOperation operation, CompleteExpression left,
             CompleteExpression right) {
-        super(new EmptyExpressionExtender());
+        super(new UnimplementedExpressionExtender());
         this.operation = operation;
         this.left = left;
         this.right = right;

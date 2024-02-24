@@ -3,14 +3,14 @@ package evaluator.expressions.complete_expressions;
 import java.util.ArrayList;
 
 import evaluator.SyntaxNode;
-import evaluator.expressions.extenders.EmptyExpressionExtender;
+import evaluator.expressions.extenders.CompleteExpressionExtender;
 import evaluator.values.NumberValue;
 
 public class NumberExpression extends CompleteExpression {
     private double number;
 
     public NumberExpression(double number) {
-        super(new EmptyExpressionExtender());
+        super(new CompleteExpressionExtender());
         this.number = number;
     }
 

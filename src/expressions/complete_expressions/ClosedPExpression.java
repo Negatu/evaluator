@@ -3,7 +3,7 @@ package evaluator.expressions.complete_expressions;
 import java.util.ArrayList;
 import evaluator.values.NumberValue;
 import evaluator.SyntaxNode;
-import evaluator.expressions.extenders.EmptyExpressionExtender;
+import evaluator.expressions.extenders.CompleteExpressionExtender;
 
 /*
  * Represents a closed parenthesis expression that has a complete expression inside it.
@@ -13,7 +13,7 @@ public class ClosedPExpression extends CompleteExpression {
     private CompleteExpression innerExpression;
 
     public ClosedPExpression(CompleteExpression innerExpression) {
-        super(new EmptyExpressionExtender());
+        super(new CompleteExpressionExtender());
         this.innerExpression = innerExpression;
     }
 
