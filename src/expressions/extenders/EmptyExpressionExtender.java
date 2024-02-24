@@ -11,6 +11,9 @@ import evaluator.tokens.OpToken;
 import evaluator.tokens.LeftBracketToken;
 import evaluator.tokens.NumberToken;
 
+/*
+ * Extends empty expressions into a complete expression or another incomplete expression.
+ */
 public class EmptyExpressionExtender extends ExpressionExtender<EmptyExpression> {
     @Override
     public Expression extend(EmptyExpression expression, Token token) {

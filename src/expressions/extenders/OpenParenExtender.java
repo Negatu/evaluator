@@ -8,6 +8,9 @@ import evaluator.expressions.incomplete_expressions.OpenParenExpression;
 import evaluator.expressions.ExpressionExtender;
 import evaluator.tokens.RightBracketToken;
 
+/*
+ * Extends open parenthesis expressions into a closed parenthesis expression or another open parenthesis expression.
+ */
 public class OpenParenExtender extends ExpressionExtender<OpenParenExpression> {
 
     @Override
