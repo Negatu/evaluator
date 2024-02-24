@@ -9,7 +9,7 @@ import evaluator.tokens.Token;
  */
 public class UnimplementedExpressionExtender extends ExpressionExtender<Expression> {
     @Override
-    public Expression extend(EmptyExpression expression, Token token) {
+    public Expression extend(Expression expression, Token token) {
         throw new UnsupportedOperationException(
                 String.format("ExpressionExtender not yet implemented for the expression class '%s'",
                         expression.getClass()));

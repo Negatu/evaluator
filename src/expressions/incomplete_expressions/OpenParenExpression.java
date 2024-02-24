@@ -13,6 +13,10 @@ import evaluator.SyntaxNode;
 public class OpenParenExpression extends IncompleteExpression {
     private Expression innerExpression;
 
+    public static OpenParenExpression ofEmpty() {
+        return new OpenParenExpression(new EmptyExpression());
+    }
+
     public OpenParenExpression(Expression innerExpression) {
         super(new OpenParenExtender());
         this.innerExpression = innerExpression;

@@ -5,6 +5,7 @@ import java.util.ArrayList;
 import evaluator.expressions.extenders.UnimplementedExpressionExtender;
 import evaluator.SyntaxNode;
 import evaluator.operations.UnaryOperation;
+import evaluator.tokens.OpToken;
 
 /*
  * Represents an incomplete expression with a unary operation. 
@@ -14,6 +15,10 @@ import evaluator.operations.UnaryOperation;
 public class UnaryRincExpression extends IncompleteExpression {
     private UnaryOperation operation;
     private IncompleteExpression incompleteOperand;
+
+    public static UnaryRincExpression from(OpToken token) {
+        return new UnaryRincExpression(UnaryOperation.from(token));
+    }
 
     public UnaryRincExpression(UnaryOperation operation) {
         super(new UnimplementedExpressionExtender());
