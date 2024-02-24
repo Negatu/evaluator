@@ -14,7 +14,7 @@ public abstract class IncompleteExpression extends Expression {
     }
 
     @Override
-    public NumberValue eval() {
+    public final NumberValue eval() {
         throw new RuntimeException("Can not eval  an incomplete expression");
     }
 }

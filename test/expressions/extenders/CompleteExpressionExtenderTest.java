@@ -16,7 +16,7 @@ import evaluator.expressions.complete_expressions.BinaryExpression;
 import evaluator.expressions.complete_expressions.NumberExpression;
 import evaluator.expressions.incomplete_expressions.EmptyExpression;
 import evaluator.expressions.incomplete_expressions.BinaryRincExpression;
-import evaluator.expressions.incomplete_expressions.OpenPRincExpression;
+import evaluator.expressions.incomplete_expressions.OpenParenExpression;
 import evaluator.operations.BinaryOperation;
 import evaluator.operations.BinaryPlusOperation;
 import evaluator.operations.BinaryMinusOperation;
@@ -58,11 +58,12 @@ public class CompleteExpressionExtenderTest {
 
     @Test
     public void extend_withLeftBracketToken_returnsBinaryRincExpressionWithTimesOperation() {
+        OpenParenExpression expectedEmptyParenExpression = new OpenParenExpression(new EmptyExpression());
         BinaryRincExpression brincExpression = completeExpressionExtender.extend(completeExpression,
                 new LeftBracketToken());
 
         assertThat(brincExpression.getLeft()).isEqualTo(completeExpression);
-        assertThat(brincExpression.getRight()).isEqualTo(new OpenPRincExpression(new EmptyExpression()));
+        assertThat(brincExpression.getRight()).isEqualTo(expectedEmptyParenExpression);
         assertThat(brincExpression.getOperation()).isInstanceOf(BinaryTimesOperation.class);
     }
 

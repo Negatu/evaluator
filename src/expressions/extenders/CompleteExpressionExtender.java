@@ -4,7 +4,7 @@ import evaluator.expressions.Expression;
 import evaluator.expressions.ExpressionExtender;
 import evaluator.expressions.complete_expressions.CompleteExpression;
 import evaluator.expressions.incomplete_expressions.EmptyExpression;
-import evaluator.expressions.incomplete_expressions.OpenPRincExpression;
+import evaluator.expressions.incomplete_expressions.OpenParenExpression;
 import evaluator.expressions.incomplete_expressions.BinaryRincExpression;
 import evaluator.operations.BinaryOperation;
 import evaluator.operations.BinaryTimesOperation;
@@ -26,8 +26,8 @@ public class CompleteExpressionExtender extends ExpressionExtender<CompleteExpre
                     new EmptyExpression());
         } else if (token instanceof LeftBracketToken) {
             // Assume left bracket token without explicit operation is a multiplication
-            return new BinaryRincExpression(new BinaryTimesOperation(), expression, new OpenPRincExpression(
-                    new EmptyExpression()));
+            OpenParenExpression emptyParenExpression = new OpenParenExpression(new EmptyExpression());
+            return new BinaryRincExpression(new BinaryTimesOperation(), expression, emptyParenExpression);
         } else {
             throw new IllegalArgumentException(String.format("Unable to extend '%s' with '%s'", expression, token));
         }

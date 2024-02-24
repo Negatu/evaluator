@@ -9,7 +9,7 @@ import evaluator.expressions.extenders.EmptyExpressionExtender;
  * Represents a closed parenthesis expression that has a complete expression inside it.
  * e.g. (12), (1 + 2), (3 * 4)
  */
-class ClosedPExpression extends CompleteExpression {
+public class ClosedPExpression extends CompleteExpression {
     private CompleteExpression innerExpression;
 
     public ClosedPExpression(CompleteExpression innerExpression) {
