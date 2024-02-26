@@ -2,7 +2,7 @@ package evaluator.expressions.incomplete_expressions;
 
 import java.util.ArrayList;
 
-import evaluator.expressions.extenders.UnimplementedExpressionExtender;
+import evaluator.expressions.extenders.UnaryRincExtender;
 import evaluator.SyntaxNode;
 import evaluator.operations.UnaryOperation;
 import evaluator.tokens.OpToken;
@@ -21,13 +21,13 @@ public class UnaryRincExpression extends IncompleteExpression {
     }
 
     public UnaryRincExpression(UnaryOperation operation) {
-        super(new UnimplementedExpressionExtender());
+        super(new UnaryRincExtender());
         this.operation = operation;
         incompleteOperand = new EmptyExpression();
     }
 
     public UnaryRincExpression(UnaryOperation operation, IncompleteExpression incompleteOperand) {
-        super(new UnimplementedExpressionExtender());
+        super(new UnaryRincExtender());
         this.operation = operation;
         this.incompleteOperand = incompleteOperand;
     }

@@ -4,7 +4,7 @@ import java.util.ArrayList;
 
 import evaluator.SyntaxNode;
 import evaluator.expressions.complete_expressions.CompleteExpression;
-import evaluator.expressions.extenders.UnimplementedExpressionExtender;
+import evaluator.expressions.extenders.BinaryRincExtender;
 import evaluator.operations.BinaryOperation;
 
 /*
@@ -18,7 +18,7 @@ public class BinaryRincExpression extends IncompleteExpression {
     private IncompleteExpression right;
 
     public BinaryRincExpression(BinaryOperation operation, CompleteExpression left, IncompleteExpression right) {
-        super(new UnimplementedExpressionExtender());
+        super(new BinaryRincExtender());
         this.operation = operation;
         this.left = left;
         this.right = right;
