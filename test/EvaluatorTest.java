@@ -95,4 +95,14 @@ public class EvaluatorTest {
         assertThat(result).isEqualTo(expectedResult);
     }
 
+    @Test
+    public void evaluate_whenDecimalNumbers_returnsCorrectResult() {
+        String input = "1.2 + 2.5 * 0.5";
+        NumberValue expectedResult = new NumberValue(2.45);
+
+        NumberValue result = evaluator.evaluate(input);
+
+        assertThat(result).isEqualTo(expectedResult);
+    }
+
 }
