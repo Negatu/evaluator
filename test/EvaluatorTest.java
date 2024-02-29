@@ -87,8 +87,8 @@ public class EvaluatorTest {
 
     @Test
     public void evaluate_whenComplexParenthesisExpression_returnsCorrectResult() {
-        String input = "((((-10 + 2) * (5 - 3)) + ((++8 - 4) * 6)) + (((3 + 7) * (4 - 2)) + ((6 - 2) * 5)))";
-        NumberValue expectedResult = new NumberValue(48);
+        String input = "(48 * 14) / ((((-10 + 2) * (5 - 3)) + ((++8 - 4) * 6)) + (((100/10) * (4 - 2)) + ((6 - 2) * 5)))";
+        NumberValue expectedResult = new NumberValue(14);
 
         NumberValue result = evaluator.evaluate(input);
 

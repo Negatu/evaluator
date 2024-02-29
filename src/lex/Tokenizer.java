@@ -11,6 +11,7 @@ import evaluator.tokens.RightBracketToken;
 import evaluator.tokens.TokenType;
 import evaluator.tokens.BracketToken;
 import evaluator.tokens.EOFToken;
+import evaluator.tokens.ForwardSlashToken;
 
 class Tokenizer {
 
@@ -25,6 +26,8 @@ class Tokenizer {
             return new TimesToken();
         } else if (String.valueOf(c).equals(MinusToken.DASH_SYMBOL)) {
             return new MinusToken();
+        } else if (String.valueOf(c).equals(ForwardSlashToken.FORWARD_SLASH_SYMBOL)) {
+            return new ForwardSlashToken();
         } else if (String.valueOf(c).equals(LeftBracketToken.LEFT_BRACKET)) {
             return new LeftBracketToken();
         } else if (String.valueOf(c).equals(RightBracketToken.RIGHT_BRACKET)) {

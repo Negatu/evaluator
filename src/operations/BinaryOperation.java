@@ -5,6 +5,7 @@ import evaluator.tokens.OpToken;
 import evaluator.tokens.MinusToken;
 import evaluator.tokens.PlusToken;
 import evaluator.tokens.TimesToken;
+import evaluator.tokens.ForwardSlashToken;
 
 public abstract class BinaryOperation extends Operation {
     abstract public NumberValue eval(NumberValue left, NumberValue right);
@@ -16,6 +17,8 @@ public abstract class BinaryOperation extends Operation {
             return new BinaryTimesOperation();
         } else if (token instanceof MinusToken) {
             return new BinaryMinusOperation();
+        } else if (token instanceof ForwardSlashToken) {
+            return new BinaryDivideOperation();
         } else {
             throw new IllegalArgumentException(String.format("Unknown binary operation token: %s", token));
         }

@@ -19,4 +19,18 @@ public class PrecedenceTest {
         assertThat(Precedence.of(timesOperation)).isGreaterThan(Precedence.of(minusOperation));
     }
 
+    @Test
+    public void divide_operation_has_higher_precedence_than_plus_operation() {
+        BinaryOperation divideOperation = new BinaryDivideOperation();
+        BinaryOperation plusOperation = new BinaryPlusOperation();
+        assertThat(Precedence.of(divideOperation)).isGreaterThan(Precedence.of(plusOperation));
+    }
+
+    @Test
+    public void divide_operation_has_higher_precedence_than_minus_operation() {
+        BinaryOperation divideOperation = new BinaryDivideOperation();
+        BinaryOperation minusOperation = new BinaryMinusOperation();
+        assertThat(Precedence.of(divideOperation)).isGreaterThan(Precedence.of(minusOperation));
+    }
+
 }
