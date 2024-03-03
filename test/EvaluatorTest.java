@@ -87,8 +87,20 @@ public class EvaluatorTest {
 
     @Test
     public void evaluate_whenComplexParenthesisExpression_returnsCorrectResult() {
-        String input = "(48 * 14) / ((((-10 + 2) * (5 - 3)) + ((++8 - 4) * 6)) + (((100/10) * (4 - 2)) + ((6 - 2) * 5)))";
+        // 48 * 14 / ( (-16) + (24) + (20) + (20) ) --> 48 * 14 / 48 --> 14
+        String input = "(48 * 14) / ((((-10 + 2) * (5 - 3)) + ((++2^3 - 4) * 6)) + (((10^2/10) * (4 - 2)) + ((6 - 2) * 5)))";
         NumberValue expectedResult = new NumberValue(14);
+
+        NumberValue result = evaluator.evaluate(input);
+
+        assertThat(result).isEqualTo(expectedResult);
+    }
+
+    @Test
+    public void evaluate_whenAllOpsWithoutParenthesis_returnsCorrectResult() {
+        // 3 + 7 + 15 + 5 --> 10 + 20 --> 30
+        String input = "6 / 2 + 49 ^ 0.5 + 3 * 5 - - 5";
+        NumberValue expectedResult = new NumberValue(30);
 
         NumberValue result = evaluator.evaluate(input);
 

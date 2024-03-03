@@ -10,8 +10,8 @@ import evaluator.tokens.LeftBracketToken;
 import evaluator.tokens.RightBracketToken;
 import evaluator.tokens.TokenType;
 import evaluator.tokens.BracketToken;
-import evaluator.tokens.EOFToken;
 import evaluator.tokens.ForwardSlashToken;
+import evaluator.tokens.CaretToken;
 
 class Tokenizer {
 
@@ -28,6 +28,8 @@ class Tokenizer {
             return new MinusToken();
         } else if (String.valueOf(c).equals(ForwardSlashToken.FORWARD_SLASH_SYMBOL)) {
             return new ForwardSlashToken();
+        } else if (String.valueOf(c).equals(CaretToken.CARET_SYMBOL)) {
+            return new CaretToken();
         } else if (String.valueOf(c).equals(LeftBracketToken.LEFT_BRACKET)) {
             return new LeftBracketToken();
         } else if (String.valueOf(c).equals(RightBracketToken.RIGHT_BRACKET)) {

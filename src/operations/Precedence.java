@@ -7,7 +7,9 @@ import evaluator.operations.BinaryMinusOperation;
 
 public class Precedence {
     public static int of(BinaryOperation operation) {
-        if (operation instanceof BinaryTimesOperation) {
+        if (operation instanceof ExponentOperation) {
+            return 3;
+        } else if (operation instanceof BinaryTimesOperation) {
             return 2;
         } else if (operation instanceof BinaryDivideOperation) {
             return 2;

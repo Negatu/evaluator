@@ -12,6 +12,7 @@ import evaluator.tokens.TimesToken;
 import evaluator.tokens.MinusToken;
 import evaluator.tokens.OpToken;
 import evaluator.tokens.ForwardSlashToken;
+import evaluator.tokens.CaretToken;
 import evaluator.tokens.EOFToken;
 
 public class BinaryOperationTest {
@@ -42,6 +43,13 @@ public class BinaryOperationTest {
         BinaryOperation operation = BinaryOperation.from(new ForwardSlashToken());
         assertThat(operation).isInstanceOf(BinaryDivideOperation.class);
         assertThat(operation.eval(new NumberValue(15), new NumberValue(5)).getNumber()).isEqualTo(3);
+    }
+
+    @Test
+    public void fromCaretToken_returnsExponentOperation() {
+        BinaryOperation operation = BinaryOperation.from(new CaretToken());
+        assertThat(operation).isInstanceOf(ExponentOperation.class);
+        assertThat(operation.eval(new NumberValue(5), new NumberValue(3)).getNumber()).isEqualTo(125);
     }
 
     @Test
